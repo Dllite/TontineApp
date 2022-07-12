@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\View;
 
 class AproposController extends Controller
 {
-    public function index(){
+    public function index() {
         return View("apropos.index");
     }
 }
