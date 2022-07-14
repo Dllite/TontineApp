@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AproposController;
+use App\Http\Controllers\AccueilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', function(){
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -38,4 +39,6 @@ Route::get('/home', [HomeController::class, 'index']);
 //Route::get('/a-propos', 'AproposController@index')->name('apropos');
 
 Route::get('/a-propos', [AproposController::class, 'index']);
+
+Route::get('/accueil', [AccueilController::class, 'index']);
 
